@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #00204a;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.form-container {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header img {
+  height: 40px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 12px;
+}
+
+.form-group img {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.form-group input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-size: 1em;
+  color: #333;
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+.form-group.password {
+  position: relative;
+}
+
+.form-group.password button {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.mini-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mini-input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 12px;
+}
+
+.mini-input img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.mini-input input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 50px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.mini-input p {
+  margin-left: 6px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#guardar {
+  background-color: #800040;
+  color: white;
+}
+
+#guardar:hover {
+  background-color: #a0005a;
+}
+
+#cancelar {
+  background-color: #ccc;
+  color: #222;
+}
+
+#cancelar:hover {
+  background-color: #bbb;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* Hace que la imagen cubra el círculo sin distorsionarse */
+  cursor: pointer;
+  /* Cambia el cursor para indicar que se puede hacer clic */
+  position: relative;
+  left: 70px;
+}
+
+.form-grouperfil {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background: #f0f0f0;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.fotico {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}

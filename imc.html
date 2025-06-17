@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Calculadora IMC</title>
+  <link rel="website icon" type="png" href="IMAGENES/visual1/logoweb.png">
+  <link rel="stylesheet" href="CSS/imc.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="menuherramientas.html"><img src="IMAGENES/visual6/atras.png" class="botonatras" /></a>
+    Calculadora de IMC
+  </div>
+
+  <div class="main">
+    <div class="formula">
+      Ingresa los datos necesarios sobre la fórmula:<br><br>
+      <strong>IMC = Peso (kg) / (Altura en metros)<sup>2</sup></strong>
+    </div>
+
+    <div class="input-group">
+      <input type="number" id="peso" placeholder="Peso en kilogramos (kg)">
+      <input type="number" id="altura" step="0.01" placeholder="Altura en metros (m)">
+      <button class="btn" onclick="calcularIMC()">Calcular IMC</button>
+    </div>
+
+    <div class="resultado" id="resultado"></div>
+
+    <div class="info">
+      <img
+        src="https://www.clivi.com.mx/hs-fs/hubfs/tabla-imc-67926b2cd1155.webp?width=800&height=800&name=tabla-imc-67926b2cd1155.webp"
+        alt="Tabla IMC">
+      <p>
+        El Índice de Masa Corporal (IMC) es una medida que se usa para estimar la cantidad de grasa corporal. Sirve para
+        clasificar si una persona tiene bajo peso, peso normal, sobrepeso u obesidad.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function calcularIMC() {
+      const peso = parseFloat(document.getElementById("peso").value);
+      const altura = parseFloat(document.getElementById("altura").value);
+      const resultado = document.getElementById("resultado");
+
+      if (!peso || !altura || altura <= 0) {
+        resultado.textContent = "Por favor ingresa valores válidos.";
+        return;
+      }
+
+      const imc = peso / (altura * altura);
+      resultado.textContent = `Tu IMC es ${imc.toFixed(2)}`;
+    }
+  </script>
+
+</body>
+
+</html>

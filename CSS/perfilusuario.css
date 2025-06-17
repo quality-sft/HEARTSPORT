@@ -1,0 +1,114 @@
+body {
+  background-color: #073674;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.botonatras {
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 5px;
+}
+
+h1 {
+  color: white;
+  font-size: 28px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+.profile-picture {
+  margin-top: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgb(0, 0, 0);
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.azulito {
+  margin-top: 20px;
+  background-color: #00b2ff;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nombre {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 18px;
+  color: #cfe0ff;
+  margin-bottom: 5px;
+}
+
+.dato {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+  width: 40%;
+}
+
+.item strong {
+  display: block;
+  color: #cfe0ff;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.item p {
+  margin: 0;
+  font-size: 18px;
+  color: white;
+}
+
+.botones-abajo {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.botones-abajo img {
+  width: 60px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.botones-abajo img:hover {
+  transform: scale(1.1);
+}

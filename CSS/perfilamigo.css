@@ -1,0 +1,75 @@
+body {
+  background: #800040;
+  /* Morado de fondo en TODA la página */
+  margin: 0;
+
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.header {
+  background-color: #800040;
+  color: white;
+  text-align: center;
+  padding: 14px 0;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  font-family: Josefin Sans, sans-serif;
+}
+
+.botonatras {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.foto-amigo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+}
+
+.foto-amigo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.info-principal {
+  background: #1d0054;
+  /* Azul oscuro */
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 250px;
+}
+
+.info-principal h2,
+.info-principal h3 {
+  margin: 5px 0;
+}
+
+.info-principal p {
+  margin: 10px 0;
+}
+
+.datos-extra {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.eli{
+  width: 50px;
+}

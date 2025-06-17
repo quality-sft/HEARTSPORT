@@ -1,0 +1,558 @@
+/*EMPRESA: SYSTEM BOSS
+APLICACIÓN: HEART SPORT
+VISUAL4: MENU DEL USUARIO*/
+body {
+    margin: 0;
+}
+
+.papasote {
+    position: absolute;
+    overflow: hidden;
+    width: 102vw;
+    height: 202vw;
+}
+
+.square2 {
+    width: 600px;
+    transform: rotate(5deg);
+    position: relative;
+    left: -5px;
+    top: -10px;
+}
+
+.square2 img {
+    position: absolute;
+    object-fit: cover;
+    animation: moveImage 60s linear infinite;
+}
+
+@keyframes moveImage {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-30%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.hijodelpapasote {
+    position: absolute;
+    overflow: hidden;
+    width: 102vw;
+    height: 290vw;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #000000;
+    position: absolute;
+    top: 65px;
+    left: 7px;
+    z-index: 2;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+#reloj-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #001a66;
+    color: white;
+    font-family: "font-family: Josefin Sans, sans-serif";
+    border-radius: 10px;
+    padding: 20px;
+    width: 150px;
+    height: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: -140px;
+    left: 20px;
+    z-index: 2;
+}
+
+#clock {
+    font-size: 56px;
+    font-weight: bold;
+
+}
+
+#fecha {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: relative;
+    top: -200px;
+}
+
+.container img {
+    width: 110px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#content {
+    z-index: 4;
+    background-color: #00d1ff;
+    width: 90%;
+    height: 90%;
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    border-radius: 20px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.hidden {
+    transform: translateX(200%);
+    opacity: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+.publicidad {
+    position: relative;
+    left: 10px;
+    top: 120px;
+    height: 550px;
+    z-index: 4;
+}
+
+.textpublicidad {
+    font-family: Josefin Sans, sans-serif;
+    z-index: 4;
+    font-size: 35px;
+    position: relative;
+    top: -210px;
+    left: 5px;
+    text-align: center;
+}
+
+.divvamos {
+    background-color: #740748;
+    width: 280px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 25px;
+    top: -200px;
+    z-index: 4;
+}
+
+.vamos {
+    color: #ffffff;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-family: Josefin Sans, sans-serif;
+    font-size: 25px;
+    margin: 0;
+}
+
+.mejorenotromomento {
+    background-color: #070874;
+    width: 250px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 40px;
+    top: -200px;
+    z-index: 4;
+}
+
+.botonmejorenotromomento {
+    text-decoration: none;
+}
+
+.textMejorenotromomento {
+    color: #ffffff;
+    font-family: Josefin Sans, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+.square {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    background-color: #0d1a5f;
+    transform: rotate(50deg);
+    z-index: 2;
+    position: relative;
+    top: 5px;
+    left: -110px;
+    border-radius: 20px;
+}
+
+.HolaBienvenida {
+    font-family: Josefin Sans, sans-serif;
+    color: #0d1a5f;
+    font-size: 60px;
+    position: absolute;
+    left: 100px;
+    top: -20px;
+}
+
+.squared {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    background-color: #0d1a5f;
+    transform: rotate(50deg);
+    z-index: 3;
+    position: relative;
+    top: 30px;
+    left: 280px;
+    border-radius: 20px;
+}
+
+.social {
+    position: relative;
+    z-index: 3;
+    width: 110px;
+    height: 100px;
+    top: -127px;
+    left: 250px;
+}
+
+.bottonsocial {
+    background: none;
+    border: none;
+}
+
+.textHerramientas {
+    position: relative;
+    top: -200px;
+    font-size: 40px;
+    font-family: Josefin Sans, sans-serif;
+}
+
+.RelojDivMayor {
+    display: flex;
+}
+
+.texttureloj {
+    font-family: Josefin Sans, sans-serif;
+}
+
+.reloj {
+    font-family: Josefin Sans, sans-serif;
+}
+
+.fecha {
+    font-family: Josefin Sans, sans-serif;
+}
+
+.imagensolluna {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 20px;
+    top: -60px;
+}
+
+
+@media (min-width: 800px) {
+
+    body {
+        margin: 0;
+        height: 1000px;
+    }
+
+    .papasote {
+        position: absolute;
+        overflow: hidden;
+        width: 102vw;
+        height: 202vw;
+        display: none;
+    }
+
+
+
+    .hijodelpapasote {
+        position: absolute;
+        overflow: hidden;
+        width: 102vw;
+        height: 290vw;
+    }
+
+    .profile-picture {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid #000000;
+        position: absolute;
+        top: 65px;
+        left: 7px;
+        z-index: 2;
+    }
+
+    .profile-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+
+    #reloj-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #001a66;
+        color: white;
+        font-family: "font-family: Josefin Sans, sans-serif";
+        border-radius: 10px;
+        padding: 20px;
+        width: 150px;
+        height: 250px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        position: relative;
+        top: -140px;
+        left: 20px;
+        z-index: 2;
+    }
+
+    #clock {
+        font-size: 56px;
+        font-weight: bold;
+
+    }
+
+    #fecha {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        position: relative;
+        top: -400px;
+    }
+
+    .container img {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    #content {
+        z-index: 4;
+        background-color: #00d1ff;
+        width: 90%;
+        height: 90%;
+        position: fixed;
+        top: 50px;
+        left: 70px;
+        border-radius: 20px;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .hidden {
+        transform: translateX(200%);
+        opacity: 0;
+    }
+
+
+    a {
+        cursor: pointer;
+    }
+
+
+    .publicidad {
+        position: relative;
+        left: 430px;
+        top: 5px;
+        height: 540px;
+        z-index: 4;
+    }
+
+    .textpublicidad {
+        font-family: Josefin Sans, sans-serif;
+        z-index: 4;
+        font-size: 35px;
+        position: relative;
+        top: -240px;
+        left: 5px;
+        text-align: center;
+    }
+
+    .divvamos {
+        background-color: #740748;
+        width: 580px;
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 320px;
+        top: -240px;
+        z-index: 4;
+    }
+
+    .vamos {
+        color: #ffffff;
+        background: none;
+        border: none;
+        font-weight: bold;
+        font-family: Josefin Sans, sans-serif;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .mejorenotromomento {
+        background-color: #070874;
+        width: 250px;
+        height: 20px;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 500px;
+        top: -245px;
+        z-index: 4;
+    }
+
+    .botonmejorenotromomento {
+        text-decoration: none;
+    }
+
+    .textMejorenotromomento {
+        color: #ffffff;
+        font-family: Josefin Sans, sans-serif;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .square {
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        background-color: #0d1a5f;
+        transform: rotate(50deg);
+        z-index: 2;
+        position: relative;
+        top: 5px;
+        left: -110px;
+        border-radius: 20px;
+    }
+
+    .HolaBienvenida {
+        font-family: Josefin Sans, sans-serif;
+        color: #0d1a5f;
+        font-size: 60px;
+        position: absolute;
+        left: 150px;
+        top: 20px;
+    }
+
+    .squared {
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        background-color: #0d1a5f;
+        transform: rotate(50deg);
+        z-index: 3;
+        position: relative;
+        top: 30px;
+        left: 1170px;
+        border-radius: 20px;
+    }
+
+    .social {
+        position: relative;
+        z-index: 3;
+        width: 110px;
+        height: 100px;
+        top: -127px;
+        left: 1170px;
+        cursor: pointer;
+    }
+
+    .bottonsocial {
+        background: none;
+        border: none;
+    }
+
+    .textHerramientas {
+        position: relative;
+        top: -450px;
+        left: 140px;
+        font-size: 40px;
+        font-family: Josefin Sans, sans-serif;
+    }
+
+    .RelojDivMayor {
+        display: flex;
+        position: relative;
+        top: -350px;
+    }
+
+    .texttureloj {
+        font-family: Josefin Sans, sans-serif;
+    }
+
+    .reloj {
+        font-family: Josefin Sans, sans-serif;
+    }
+
+    .fecha {
+        font-family: Josefin Sans, sans-serif;
+    }
+
+    .imagensolluna {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        left: 20px;
+        top: -50px;
+    }
+
+}

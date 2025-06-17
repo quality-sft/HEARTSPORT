@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  padding-bottom: 30px;
+}
+
+.header {
+  background-color: #800040;
+  color: white;
+  text-align: center;
+  padding: 14px 0;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  font-family: Josefin Sans, sans-serif;
+}
+
+.botonatras {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 24px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+
+}
+
+.section-header h2 {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: Josefin Sans, sans-serif;
+}
+
+.info-btn {
+  background-color: #00bfff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: Josefin Sans, sans-serif;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.meta-label {
+  background-color: #800040;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 17px;
+  width: auto;
+  font-family: Josefin Sans, sans-serif;
+}
+
+.dates {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  font-family: Josefin Sans, sans-serif;
+}
+
+.status {
+  background-color: #373c94;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  display: inline-block;
+  width: auto;
+  font-family: Josefin Sans, sans-serif;
+}
+
+.goal-img {
+  max-height: 100px;
+  object-fit: contain;
+  margin-left: 15px;
+}
+
+.goal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.meta-container {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.meta-container:hover {
+  transform: scale(1.01);
+}
+
+@media (max-width: 500px) {
+  .goal-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .goal-img {
+    margin: 20px 0 0 0;
+    max-height: 80px;
+    align-self: center;
+  }
+
+  .eye-icon {
+    top: 14px;
+    right: 14px;
+  }
+}

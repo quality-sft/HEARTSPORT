@@ -1,0 +1,70 @@
+<!--EMPRESA: SYSTEM BOSS
+APLICACIÓN: HEART SPORT
+VISUAL10: TERMINA LA RONDA DE ENTRENAMIENTO-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Sport</title>
+    <link rel="website icon" type="png" href="IMAGENES/visual7/logoweb.png">
+    <link rel="stylesheet" href="CSS/mapa5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="top-section">
+            <div class="title">¡Lo hiciste<br>I-N-C-R-E-Í-B-L-E!</div>
+
+        </div>
+
+
+
+        <div class="middle-section">
+            <p class="highlight">100%</p>
+            <p class="text">De la Meta <br> Recorrida!</p>
+            <img src="IMAGENES/visual11/estrella.png" alt=""
+                style="position: absolute; width: 130px; height: 130px; top: 160px; left: 30px;">
+            <p
+                style="position: absolute; font-weight: bold; top: 180px; left: 54px; font-size: 20px; text-align: center;font-family: Josefin Sans, sans-serif; ">
+                0<br> Tiendas <br> Visitadas </p>
+
+            <img src="IMAGENES/visual11/pisadas.png" alt=""
+                style="position:absolute; width: 200px; height: 200px; top: 100px; left: 180px;">
+            <p id="indicapasos"
+                style="position: absolute; text-align: center; font-weight: bold; top: 210px; left: 220px; font-size: 24px;">
+            </p>
+
+
+        </div>
+
+
+
+        <div class="bottom-section">
+
+            <p class="pregunta">¿Cómo te sentiste durante tu entrenamiento?</p>
+            <div class="button-container">
+
+                <button onclick="calificacionb()" id="buena" class="buttonbien">¡Bien!</button>
+                <br>
+                <button onclick="calificacionn()" id="normal" class="buttonnormal">Normal</button>
+                <br>
+                <button onclick="calificacionm()" id="mal" class="buttonmal">Mal</button>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+<script src="JS/mapa5.js"></script>
+
+</html>

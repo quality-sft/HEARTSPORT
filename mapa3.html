@@ -1,0 +1,58 @@
+<!--EMPRESA: SYSTEM BOSS
+APLICACIÓN: HEART SPORT
+VISUAL7: PREGUNTA DEL BARRIO AL USUARIO PARA DIRIGIRLO A LA CALIFICACIÓN-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Sport</title>
+  <link rel="website icon" type="png" href="IMAGENES/visual7/logoweb.png">
+  <link rel="stylesheet" href="CSS/visual8.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="heder">
+
+    <h1 class="textCalificaciónderutas">
+      <b>Calificación de rutas</b>
+    </h1>
+  </header>
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28583.356252323123!2d-76.56574662568357!3d3.4502143000000145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6671016240b%3A0x4bb120fc63ce64f4!2sCalypso%20Cali!5e1!3m2!1ses!2sco!4v1732220574231!5m2!1ses!2sco"
+    class="map" width="360" height="450" style="border:0; z-index: 4;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <br><br>
+  <footer class="Footer">
+    <div class="input-container">
+
+      <div class="container">
+        <label for="barrios"><b>Escoja la ruta</b></label>
+        <select id="barrios" class="styled-select">
+          <option value="" disabled selected>Selecciona un barrio</option>
+        </select>
+      </div>
+    </div>
+    <br>
+
+    <div class="DivSiguiente">
+      <a onclick="siguiente()">
+        <h1 class="TextSiguiente"><b>Siguiente</b></h1>
+      </a>
+    </div>
+  </footer>
+  <div class="Moraofinal">
+
+  </div>
+</body>
+<script src="JS/mapa3.js"></script>
+
+</html>

@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  background-color: #740748;
+}
+
+
+
+.heder {
+  background-color: #740748;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.botonatras {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 3px;
+  top: 5px;
+}
+
+.TextMapadelRecorrido {
+  color: white;
+  font-family: Josefin Sans, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 10px;
+  left: 0px;
+}
+
+.footer {
+  background-color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.recorrido {
+  background-color: #740748;
+  height: 65px;
+  width: 100%;
+}
+
+.linea {
+  position: relative;
+  top: 36px;
+  width: 90%;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 20px auto;
+  border-radius: 2px;
+  overflow: hidden;
+
+}
+
+.muneco {
+  position: absolute;
+  top: -10px;
+  /* Posicionar el muñequito justo encima de la línea */
+  left: 0;
+  font-size: 40px;
+  transition: transform 0.3s ease-in-out;
+  /* Transición suave */
+  z-index: 6;
+}
+
+.DivIniciar {
+  background-color: #004aad;
+  width: 30%;
+  text-align: center;
+  position: absolute;
+  left: 67%;
+  top: 89%;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.TextIniciar {
+  color: #ffffff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+}
+
+.map {
+  width: 100%;
+  height: 600px;
+  border: 0;
+  z-index: 4;
+  margin: 0;
+}
+
+@media (min-width: 800px) {
+
+  .map {
+    width: 100%;
+    height: 470px;
+    border: 0;
+    z-index: 4;
+    margin: 0;
+  }
+
+  .DivIniciar {
+    background-color: #004aad;
+    width: 30%;
+    text-align: center;
+    position: absolute;
+    left: 67%;
+    top: 79%;
+    border-radius: 10px;
+    z-index: 20;
+
+  }
+}

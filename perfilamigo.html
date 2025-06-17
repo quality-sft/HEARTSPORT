@@ -1,0 +1,49 @@
+<!--EMPRESA: SYSTEM BOSS
+APLICACIÓN: HEART SPORT
+VISUAL11: SECCIÓN DE AMISTAD DEL USUARIO-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Usuario</title>
+  <link rel="website icon" type="png" href="IMAGENES/visual1/logoweb.png">
+  <link rel="stylesheet" href="CSS/perfilamigo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap"
+    rel="stylesheet">
+</head>
+
+<body onload="mostrar()">
+
+  <div class="header">
+    <a href="amistades.html"><img src="IMAGENES/visual6/atras.png" class="botonatras" /></a>
+    Tus Amigos
+  </div>
+
+
+  <div class="foto-amigo">
+    <img src="" id="fotoAmigo" alt="Foto del Amigo">
+  </div>
+
+  <div class="info-principal">
+    <h2 id="nombreAmigo"></h2>
+    <p>Actualmente he recorrido: <br><strong id="pasosAmigo">100</strong> Pasos</p>
+
+    <div class="datos-extra">
+      <p><strong>Peso:</strong> <span id="pesoAmigo"></span></p>
+      <p><strong>Estatura:</strong> <span id="estaturaAmigo"></span></p>
+    </div>
+  </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <img onclick="eliminar()" id="eli" class="eli" src="/IMAGENES/perfilamigo/eliminar.png" alt="">
+
+
+</body>
+<script src="JS/perfilamigo.js"></script>
+
+</html>

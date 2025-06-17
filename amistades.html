@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amigos</title>
+  <link rel="stylesheet" href="CSS/amistades.css">
+  <link rel="website icon" type="png" href="IMAGENES/visual1/logoweb.png">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="menu.html"><img src="IMAGENES/visual6/atras.png" class="botonatras" /></a>
+    Tus Amigos
+  </div>
+
+  <!-- NUEVA BARRA DE NAVEGACIÓN -->
+  <div class="nav-tabs">
+    <button class="tab-btn active" id="tab-btn active" onclick="Amigos()">Amigos</button>
+    <button class="tab-btns" id="tab-btns" onclick="contarSolicitudes()">Solicitudes</button>
+    <button class="tab-btna" onclick="addFriend()">Añadir Amigos</button>
+  </div>
+
+  <div class="container">
+
+    <div id="amigos" class="seccion">
+      <div class="title-section">
+        <div class="friends-count" id="friendCounter"></div>
+      </div>
+      <div id="friendListAmigos"></div>
+    </div>
+
+    <div id="solicitudes" class="seccion" style="display: none;">
+      <div class="title-sections">
+        <div class="friends-counts" id="friendCounters"></div>
+      </div>
+      <div id="friendListSolicitudes"></div>
+    </div>
+  </div>
+
+
+  <br><br><br>
+  <div style="justify-content: center;" id="contenedor"></div>
+
+  <script>
+  function addFriend() {
+    localStorage.setItem('destino', "añadiramistades");
+    window.location.href = "cargando copy.html";
+  }
+
+  function hola(amigoId) {
+    localStorage.setItem("perfilamigo", amigoId);
+    window.location.href = `perfilamigo.html`;
+  }
+
+ 
+
+
+</script>
+
+  <script src="JS/amistades.js"></script>
+</body>
+
+
+</html>

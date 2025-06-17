@@ -1,0 +1,62 @@
+<!-- mapa.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Sport</title>
+    <link rel="website icon" type="png" href="IMAGENES/visual7/logoweb.png">
+    <link rel="stylesheet" href="CSS/mapa.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="heder">
+        <h1 class="TextMapadelRecorrido" style="font-family: 'Josefin Sans', sans-serif;">Mapa del recorrido</h1>
+    </header>
+
+    <div id="map" style="height: 600px; width: 100%; position: relative;"></div>
+
+    <div id="route-info" style="
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    max-height: 60px; /* Altura pequeña al principio */
+    overflow: hidden;
+    transition: max-height 0.5s ease; /* Animación suave */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 1000; /* Para que esté encima del mapa */
+">
+        <h3 id="steps-count" style="margin: 0;">Cargando ruta...</h3>
+        <ul id="steps" style="padding-left: 20px; margin-top: 10px;"></ul>
+    </div>
+
+
+    <div class="DivIniciar" style="position: absolute; top: 600px; left: 10px; z-index: 1000;">
+        <a href="mapa5.html">
+            <h1 class="TextIniciar"><b>Finalizar</b></h1>
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="recorrido">
+            <div class="linea"></div>
+            <div class="muneco">🧍‍♂️</div>
+        </div>
+    </footer>JS
+
+    <script src="JS/mapa2bike.js"></script>
+</body>
+</html>

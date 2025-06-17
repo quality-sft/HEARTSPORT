@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalle de la Meta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap"
+    rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<link rel="stylesheet" href="CSS/mostrarmetaas.css">
+</head>
+<body>
+
+ <div class="header">
+    <a href="metas.html"><img src="IMAGENES/visual6/atras.png" class="botonatras" /></a>
+    Tus Metas
+  </div>
+  <div class="detalle-container">
+    <div class="titulo">
+      <span id="nombreMeta">Nombre de la meta</span>
+      <i>🎯</i>
+    </div>
+
+    <!-- Botón eliminar (imagen) -->
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEX///8AAABWVlbV1dV9fX27u7uenp4+Pj7i4uJhYWHPz8/6+vqtra339/e+vr7IyMiFhYXp6elNTU1GRkbo6Og1NTWTk5NsbGweHh7Y2NiKiooMDAxmZmarq6s8PDwkJCQuLi4YGBibm5tQUFB3d3eRkZHFc9MnAAAE0klEQVR4nO2da3eiMBCGSxWlIoJSFdFu3d36///iru22ZZJwqcxk0rPv87E5OTNPIUBiLnd3AAAAgCbr5fRH1M98ulxrp3oL2XIzwO6dcplpJ/xVZs9f8LtSzbRT/hLJkLvT5EeinfZwljf4XVlqJz6U2Y2CUfRLO/Vh3C4YRd+iMa5GCEbRSjv9ftajBKMo/Ffj/UjDe22BPvKRglGUayv0MB9tONdW6GYxWjCKJtoSnUwZDKfaEl2kWyPbefyYdvMYl0adbaqt0UFiJDvsBW5+IoT8fRrTVHcDq+1otVg0x3HQVJ+H3m4p7WoN/cdoUNz4yKAPqEIww7HQTId3hmh3K+SHKTUc3p5iGAYDDNuAYTjAsI3vY0jf+MPHXOjYjs4bP9/PB1CRTM9DqrxyJvWqIVX2vGMB6/Fdd35KxkGrseNnQhz5FM0+aiiUXILjx8+k4GqLe22RVvZMhiE+Zt7guk3DNeQaW4WhHjCEIQz1kTHME01yD4a6vyokMLwJGPoEhrdBDXUnvKw9GN4/aHLvwTAkYAhDGOoDQxi+81tbpJXfTIZjJm7LwjUtPNMWaYVtoc2t6yekYVyf8UvbxQnr6ozJV5Zp+WHDPZc4WbwxoT8mLhfS0CZSTv79WbCbSvsvB7lA/ziQeD4WK1BD+WnnExiyA0NuYMgPDLmBIT8w5AaG/MAwi+vikruXPGWruqhX7p55ml+KOrbLgjOcHV//vnVNG4zf5hBXrgng+dvSxaM19BKa4ctHia3xubLN7p1/9gLNeeyBGTaH5cyuY3NCvjnJvakxay/SNySjcubUyOYiw7NR1hw4ONK2GJYhHXGgAw10mfeClNHfrukQWliGXest6LgyvRW71luEZdi1ZqbLsGvNDAz5gSEMYQhDeWAIQxjCUB4YwhCGMJQHhjCEIQzlgSEMYQhDeWAIQxjCUB4YwhCGMJQHhjCEIQzlgSEMYQhDeWAIQxjCUB4YwhCGMJQHhjCEIQzlgSEMYQhDeWAIQxjCUB4YwhCGMJQHhjCEIQzlgSEMYQhDeWAIQxjCUJ7hhsN3hvw+hrOOMrq/JbWnFrOOMm3Dx2ZRReulpJ6xk3LVLHskRWEZktvU3Em3eYHN/ZCbF5huXxqaYWO73MKqefooO1lln3u7mpvzhmb4oeE6MOxdw5b/vMKWvLbhwio/FOV8s3OfOJvU5bys3QcZrXebeVnYZw8tlA1dm4/zEns3PJGIO/F4FxLPbsH8TD1HpP9RVxPm5olEPLId0NdCdiTxnoTDXaEt33rrcUM/hRxPNn7oydjW64sbepCdn1PBtz4vonEJt6LB3tnRoJVkS8x+0mDyj+4r9Li+KHoQjPVgxJI/jPCVZyPsi1ikFyPSWSwSxTp4VeoqmleQ82jVTszG8fcBIPEQX2zNMD+lX74fOI5AfuA+FmlysoNwHXDcT3q2o0dVHR+ylIPsENfWbXJthe4jlkRYOeLL4zpgSYy9guDep+BdWvVnxEzl8R69kvSnxIzgEcduFv05seKjU2Hg92kj3UlzknsUVLiCVw6u16IEz54+uG0yx3eHACdvH2sO4v78RuPrc7uFtBb2qz2/Bh2sL2Z/kY/q4mVcppcsN3uqPOxbTizVIXkqNnxfctWmePL+DQMAAOA/5g/4DnVmufWqqAAAAABJRU5ErkJggg==" onclick="eliminar()" id="btnEliminar" style="cursor:pointer; width:24px; height:24px; position: absolute; left: 303px; top: 145px;" title="Eliminar meta" />
+
+
+    <div class="campo">
+      <label>Descripción</label>
+      <span id="descripcionMeta"></span>
+    </div>
+
+    <div class="campo">
+      <label>Fecha de inicio</label>
+      <span id="fechaInicioMeta"></span>
+    </div>
+
+    <div class="campo">
+      <label>Fecha de terminación</label>
+      <span id="fechaFinMeta"></span>
+    </div>
+
+    <div class="estado" id="estadoMeta">Estado</div>
+
+    
+  </div>
+
+</body>
+<script src="JS/mostrarmetas.js"></script>
+</html>

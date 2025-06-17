@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amigos</title>
+  <link rel="stylesheet" href="CSS/amistades.css">
+  <link rel="website icon" type="png" href="IMAGENES/visual1/logoweb.png">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="menu.html"><img src="IMAGENES/visual6/atras.png" class="botonatras" /></a>
+    Rutas compartidas
+  </div>
+
+
+  <div class="container">
+
+    <div id="amigos" class="seccion">
+      <div class="title-section">
+        <div class="friends-count" id="friendCounter"></div>
+      </div>
+      <div id="friendList"></div>
+    </div>
+
+    <div id="solicitudes" class="seccion" style="display: none;">
+      <div class="title-sections">
+        <div class="friends-counts" id="friendCounters"></div>
+      </div>
+      <div id="friendList"></div>
+    </div>
+  </div>
+
+
+  <br><br><br>
+<div id="rutas-compartidas-container"></div>
+  <script>
+
+
+  function hola(amigoId) {
+    localStorage.setItem("perfilamigo", amigoId);
+    window.location.href = `perfilamigo.html`;
+  }
+
+ 
+
+
+</script>
+
+  <script src="JS/rutascompartidas.js"></script>
+</body>
+
+
+</html>

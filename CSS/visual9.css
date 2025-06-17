@@ -1,0 +1,97 @@
+/*EMPRESA: SYSTEM BOSS
+APLICACIÓN: HEART SPORT
+VISUAL8: ESTILOS DE LA PARTE DE LA CALIFICACIÓN DE LA RUTA*/
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #0d1777;
+}
+
+.card {
+  margin-top: 60px;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.rating {
+  margin-top: 10px;
+}
+
+.star {
+  font-size: 24px;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star.selected,
+.star:hover,
+.star:hover~.star {
+  color: #f7d106;
+}
+
+.heder {
+  background-color: #740748;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.TextGracias {
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 10px;
+  left: 7px;
+  font-size: 28px;
+}
+
+.TextPregunta {
+  font-family: Josefin Sans, sans-serif;
+}
+
+.divTerminar {
+  background-color: #004aad;
+  width: 60%;
+  text-align: center;
+  position: absolute;
+  left: 20%;
+  top: 88%;
+  border-radius: 10px;
+  z-index: 3;
+  display: none;
+}
+
+.Terminar {
+  color: #ffffff;
+  font-family: Josefin Sans, sans-serif;
+  font-size: 20px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Usuario</title>
+    <link rel="website icon" type="png" href="IMAGENES/visual1/logoweb.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/perfilusuario.css">
+    <style>
+
+
+    </style>
+</head>
+
+<body onload="cargarNombreUsuario()">
+
+    <a href="menu.html"><img src="IMAGENES/visual13/atras.png" class="botonatras"></a>
+
+    <h1>Perfil</h1>
+
+    <div class="profile-picture">
+        <img id="fotodeperfil" src="" alt="Foto de perfil">
+    </div>
+
+    <div class="azulito">
+        <h1 class="nombre" id="nombre">Usuario</h1>
+
+        <div class="subtitulo">Fecha de nacimiento</div>
+        <div class="dato" id="fechanacimiento">--/--/----</div>
+
+        <div class="contenedor">
+            <div id="pesodiv" class="item">
+                <strong>Peso</strong>
+                <p id="peso">-- kg</p>
+            </div>
+            <div id="estaturadiv" class="item">
+                <strong>Estatura</strong>
+                <p id="estatura">-- cm</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="botones-abajo">
+        <a href="editarperfilusuario.html"><img src="IMAGENES/visual13/Ajustes.png" alt="Editar Perfil"></a>
+        <img src="IMAGENES/visual13/CerrarSesion.png" onclick="borrarlocalstorage()" id="miImagen" alt="Cerrar Sesión">
+    </div>
+
+    <script src="JS/perfilusuario.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+    }
+
+    .header {
+  background-color: #800040;
+  color: white;
+  text-align: center;
+  padding: 14px 0;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  font-family: Josefin Sans, sans-serif;
+}
+
+.botonatras {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+    .semana {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      width: 340px;
+      position: relative;
+      left: 10px;
+    }
+
+    .semana h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #003366;
+    }
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+      max-height: 300px;
+    }
+
+    .contenido {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }

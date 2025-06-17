@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscar Amigos</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <link rel="stylesheet" href="CSS/añadiramistades.css">
+  <link rel="website icon" type="png" href="IMAGENES/visual1/logoweb.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <!--<button class="botonatras" onclick="regresar()">←</button>-->
+
+  <div class="header">
+    <a href="amistades.html"><img src="IMAGENES/visual6/atras.png" class="botonatras" /></a>
+    Añadir Amigos
+  </div>
+
+
+  <div class="container">
+    <div class="search-box">
+      <input type="text" id="busqueda" placeholder="Buscar amigo por nombre..." />
+      <button class="buscar-btn" onclick="Buscar()">Buscar</button>
+    </div>
+    <div id="resultados"></div>
+  </div>
+
+  <script src="JS/añadiramistades.js"> </script>
+</body>
+
+</html>

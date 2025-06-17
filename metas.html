@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tus Metas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/CSS/metas.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="menuherramientas.html"><img src="IMAGENES/visual6/atras.png" class="botonatras" /></a>
+    Tus Metas
+  </div>
+
+  <div class="content">
+
+    <div class="section-header">
+      <h2 id="textoactual" class="textoactual">Tienes</h2>
+      <div class="info-btn" onclick="añadirmetas()">+</div>
+    </div>
+
+
+
+
+
+  </div>
+
+  <div id="goal-container" class="goal-container"></div>
+</body>
+
+<script src="JS/metas.js"></script>
+<script>
+  function hola(nombredemeta) {
+    alert(nombredemeta)
+    localStorage.setItem("vermeta", nombredemeta);
+    window.location.href = `mostrarmetas.html`;
+  }
+</script>
+</html>

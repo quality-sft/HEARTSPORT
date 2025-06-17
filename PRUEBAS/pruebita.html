@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fechas agrupadas por semana</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 1rem;
+    }
+    .semana {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .fecha {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rutas agrupadas por semana</h1>
+  <div id="contenedor-fechas"></div>
+
+  <script>
+ const supabaseUrl = "https://snytahpifahyqbuosbes.supabase.co";
+ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNueXRhaHBpZmFoeXFidW9zYmVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE0ODQ4ODcsImV4cCI6MjA1NzA2MDg4N30.Q1W3yhjqu-cRnnx9tRxA4Inxnlnz0AU78rfw6aDa4VY";
+ const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+    function getStartOfWeek(fecha) {
+      const dia = fecha.getDay(); // 0: domingo, 1: lunes, ...
+      const diferencia = (dia === 0 ? -6 : 1) - dia; // ajustar si es domingo
+      const inicio = new Date(fecha);
+      inicio.setDate(fecha.getDate() + diferencia);
+      inicio.setHours(0, 0, 0, 0);
+      return inicio.toISOString().split('T')[0]; // 'YYYY-MM-DD'
+    }
+
+    async function cargarFechasAgrupadas() {
+      const { data, error } = await supabase
+        .from('Rutas')
+        .select('created_at');
+
+      if (error) {
+        console.error('Error al obtener rutas:', error.message);
+        return;
+      }
+
+      const agrupadas = {};
+
+      data.forEach(ruta => {
+        const fecha = new Date(ruta.created_at);
+        const claveSemana = getStartOfWeek(fecha); // clave por lunes
+        if (!agrupadas[claveSemana]) agrupadas[claveSemana] = [];
+        agrupadas[claveSemana].push(fecha);
+      });
+
+      const contenedor = document.getElementById('contenedor-fechas');
+      const semanasOrdenadas = Object.keys(agrupadas).sort();
+
+      semanasOrdenadas.forEach((clave, index) => {
+        const semanaDiv = document.createElement('div');
+        semanaDiv.className = 'semana';
+        semanaDiv.textContent = `SEMANA ${index + 1}`;
+        contenedor.appendChild(semanaDiv);
+
+        agrupadas[clave].forEach(fecha => {
+          const fechaDiv = document.createElement('div');
+          fechaDiv.className = 'fecha';
+          fechaDiv.textContent = fecha.toLocaleString('es-CO');
+          contenedor.appendChild(fechaDiv);
+        });
+      });
+    }
+
+    cargarFechasAgrupadas();
+  </script>
+</body>
+</html>

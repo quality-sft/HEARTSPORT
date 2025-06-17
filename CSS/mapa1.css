@@ -1,0 +1,235 @@
+/*EMPRESA: SYSTEM BOSS
+APLICACIÓN: HEART SPORT
+VISUAL6: ESTILOS DE LA PARTE DEL MAPA PIDIENDO LOS DATOS*/
+.container {
+  text-align: center;
+  position: relative;
+  top: -10px;
+}
+
+label {
+  font-size: 25px;
+  font-family: Josefin Sans, sans-serif;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.styled-select {
+  width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #800040;
+  color: white;
+  outline: none;
+  text-align: center;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.styled-select option {
+  background-color: white;
+  color: black;
+}
+
+option {
+  font-family: Josefin Sans, sans-serif;
+}
+
+label {
+  font-family: Josefin Sans, sans-serif;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.heder {
+  background-color: #740748;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.botonatras {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 3px;
+  top: 5px;
+}
+
+.TextMapadelRecorrido {
+  color: white;
+  font-family: Josefin Sans, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 10px;
+  left: 15px;
+}
+
+.footer {
+  background-color: white;
+  z-index: 6;
+}
+
+.DivIniciar {
+  background-color: #004aad;
+  width: 60%;
+  text-align: center;
+  position: absolute;
+  left: 20%;
+  top: 123%;
+  border-radius: 10px;
+  z-index: 3;
+}
+
+.TextIniciar {
+  color: #ffffff;
+  font-family: Josefin Sans, sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #004aad;
+  border: none;
+
+}
+.styled-selecta{
+  width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #800040;
+    color: rgba(255, 255, 255, 0.621);
+    outline: none;
+    text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+  .styled-selecta option {
+    background-color: white;
+    color: black;
+  }
+
+
+
+@media (min-width: 800px) {
+  .container {
+    text-align: center;
+    position: relative;
+    top: -10px;
+    font-family: Josefin Sans, sans-serif;
+  }
+
+  label {
+    font-size: 25px;
+    font-family: Josefin Sans, sans-serif;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .styled-select {
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #800040;
+    color: white;
+    outline: none;
+    text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .styled-select option {
+    background-color: white;
+    color: black;
+  }
+
+  option {
+    font-family: Josefin Sans, sans-serif;
+  }
+
+  label {
+    font-family: Josefin Sans, sans-serif;
+  }
+
+
+
+  body {
+    margin: 0;
+    height: 750px;
+  }
+
+  .heder {
+    background-color: #740748;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .botonatras {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .botonatras:hover {
+    transform: scale(1.1);
+  }
+
+  .TextMapadelRecorrido {
+    color: white;
+    font-family: Josefin Sans, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 10px;
+    left: 15px;
+  }
+
+  .footer {
+    background-color: white;
+    z-index: 6;
+  }
+
+  .DivIniciar {
+    background-color: #004aad;
+    width: 60%;
+    text-align: center;
+    position: absolute;
+    left: 20%;
+    top: 133%;
+    border-radius: 10px;
+    z-index: 3;
+  }
+
+  .TextIniciar {
+    color: #ffffff;
+    font-family: Josefin Sans, sans-serif;
+    font-size: 15px;
+
+  }
+
+
+}

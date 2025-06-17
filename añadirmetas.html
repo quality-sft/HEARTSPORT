@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tus Metas</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="website icon" type="png" href="IMAGENES/visual1/logoweb.png">
+  <link rel="stylesheet" href="añadirmetas.css">
+</head>
+
+<body>
+  <div class="header">
+    <a href="metas.html"><img src="IMAGENES/visual6/atras.png" class="botonatras" /></a>
+    Tus Metas
+  </div>
+  <div class="container">
+    <h2>Crear nueva meta</h2>
+    <form id="metaForm">
+      <input type="text" id="nombreMeta" placeholder="Nombre de meta" />
+
+      <textarea id="descripcion" placeholder="Descripción de la meta"></textarea>
+
+      <label for="fechaInicio">Fecha de inicio</label>
+      <input type="date" id="fechaInicio" />
+
+      <label for="fechaFin">Fecha de terminación</label>
+      <input type="date" id="fechaFin" />
+
+      <button type="button" onclick="Añadir()">Guardar meta</button>
+    </form>
+  </div>
+</body>
+
+<script src="JS/añadirmetas.js"></script>
+
+</html>

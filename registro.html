@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Heart Sport</title>
+    <link rel="icon" type="image/png" href="IMAGENES/visual2/logoweb.png">
+    <link rel="stylesheet" href="CSS/registro.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <img class="logo" src="IMAGENES/visual3/LogoHorizontalfondoblanco.png" alt="Heart Sport">
+
+        <h1 class="texto-bienvenida">¡Regístrate y únete a la comunidad!</h1>
+
+        <div class="form">
+            <input class="input-field" id="Nombre" type="text" placeholder="Nombre completo">
+            <input class="input-field" id="Correo" type="email" placeholder="Correo electrónico">
+
+            <div class="password-container">
+                <input type="password" id="password" class="input-field" placeholder="Contraseña">
+                <button type="button" onclick="Ver()" class="toggle-password">
+                    <img src="IMAGENES/visual3/ver.png" id="ojito" alt="Mostrar/Ocultar">
+                </button>
+            </div>
+
+            <div class="password-container">
+                <input type="password" pattern="[A-Za-z\-]+" id="password2" class="input-field"
+                    placeholder="Confirmar contraseña">
+                <button type="button" pattern="[A-Za-z\-]+" onclick="Ver2()" class="toggle-password">
+                    <img src="IMAGENES/visual3/ver.png" id="ojito2" alt="Mostrar/Ocultar">
+                </button>
+            </div>
+
+            <input class="input-field" id="tel" type="tel" placeholder="Teléfono">
+
+            <label for="fecha" class="label">Fecha de nacimiento:</label>
+            <input class="input-field" id="fecha" type="date">
+
+            <h2 class="subtitle">Cuéntanos más sobre ti</h2>
+
+            <div class="extra-details">
+                <input class="input-field small" id="peso" placeholder="Peso (kg)">
+                <input class="input-field small" id="estatura" type="number" placeholder="Estatura (cm)">
+            </div>
+            <h2 class="subtitle">Danos una ubicación predeterminada para usar en tus rutas</h2>
+            <input class="input-field" id="dirección" type="text" placeholder="Dirección">
+            <h2 class="subtitle">Sube tu foto de perfil</h2>
+            <input type="file" id="foto" accept="image/*"><br>
+
+            <div class="profile-picture">
+                <img id="preview" src="" alt="Vista previa de tu foto"><br>
+            </div>
+
+            <button id="boton" class="btn-register" onclick="registerUser()">Registrarse</button>
+            <a href="inicio.html" class="btn-cancel">Cancelar</a>
+        </div>
+    </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="JS/registro.js"></script>
+</body>
+
+</html>

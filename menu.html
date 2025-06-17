@@ -1,0 +1,99 @@
+<!--EMPRESA: SYSTEM BOSS
+APLICACIÓN: HEART SPORT
+VISUAL4: MENU DEL USUARIO-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Sport</title>
+  <link rel="website icon" type="png" href="IMAGENES/visual2/logoweb.png">
+  <link rel="stylesheet" href="CSS/menu.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap"
+    rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <div id="content" style="display: none;">
+    <img class="publicidad" src="IMAGENES/visual5/publicidad.png">
+    <h1 class="textpublicidad">
+      ¡Conoce las nuevas funcionalidades sociales!
+    </h1>
+    <div class="divvamos">
+
+      <button class="vamos" id="go" onclick="amistades()">¡Vamos!</button>
+
+    </div>
+    <br>
+    <div class="mejorenotromomento">
+      <a id="close-button" class="botonmejorenotromomento">
+        <h1 class="textMejorenotromomento">
+          <b>Mejor en otro momento</b>
+        </h1>
+      </a>
+    </div>
+  </div>
+
+  <div class="papasote">
+    <div class="square2">
+      <img src="IMAGENES/visual5/menu.png" class="diagonal">
+    </div>
+  </div>
+
+
+
+
+  <div class="square"></div>
+
+  <div id="clickableProfile" class="profile-picture">
+    <img id="fotodeperfil" alt="Foto de Perfil">
+  </div>
+
+  <h1 class="HolaBienvenida">Hola!</h1>
+
+  <div class="hijodelpapasote">
+    <div class="squared"></div>
+    <button class="bottonsocial" onclick="amistades()"><img src="IMAGENES/visual5/social.png" class="social"></button>
+
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+  <h1 class="textHerramientas">Herramientas</h1>
+  <div class="container">
+    <a href="menuherramientas.html"><img src="IMAGENES/visual5/imc.png" alt="IMC y más"></a>
+    <!-- Reemplaza con la ruta de la imagen -->
+    <a href="mapa1.html"><img src="IMAGENES/visual5/mapa.png" alt="Mapa"></a>
+    <!-- Reemplaza con la ruta de la imagen -->
+    <a href="resumenes.html"><img src="IMAGENES/visual5/resumenes.png" alt="Resúmenes"></a>
+    <!-- Reemplaza con la ruta de la imagen -->
+  </div>
+
+  <!-- Contenedor principal -->
+
+
+  <!-- parte reloj-->
+  <div class="RelojDivMayor">
+    <div id="reloj-div">
+
+      <p class="texttureloj">Tu reloj</p>
+      <div class="reloj" id="clock"></div>
+      <div id="fecha" class="fecha"></div>
+
+    </div>
+    <img src="IMAGENES/visual5/sol.png" class="imagensolluna" id="alladoreloj">
+  </div>
+
+
+
+</body>
+<script src="JS/menu.js"></script>
+
+</html>

@@ -1,0 +1,163 @@
+.LogoHorizontalfondoblanco {
+    width: 35%;
+    position: absolute;
+    left: 33%;
+    z-index: 100;
+}
+
+.LogoElegido {
+    border-radius: 20%;
+    position: absolute;
+    left: 12%;
+    width: 80%;
+    top: 20%;
+    z-index: 100;
+}
+
+.DivIniciarSesion {
+    background-color: #004aad;
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    left: 10%;
+    top: 75%;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.IniciarSesion {
+    color: #ffffff;
+    font-family: Josefin Sans, sans-serif;
+    font-size: 15px;
+    z-index: 100;
+}
+
+.DivRegistrarse {
+    background-color: #740748;
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    left: 10%;
+    top: 85%;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.Registrarse {
+    color: #ffffff;
+    font-family: Josefin Sans, sans-serif;
+    font-size: 15px;
+    z-index: 100;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #111;
+    overflow-x: hidden;
+    /* Bloquea cualquier desplazamiento horizontal */
+    position: relative;
+}
+
+.balon {
+    position: absolute;
+    background: url('/lo.png') no-repeat center/contain;
+    opacity: 0.12;
+    /* Menos notorio */
+    pointer-events: none;
+}
+
+
+
+
+
+@media (min-width: 800px) {
+    .LogoHorizontalfondoblanco {
+        width: 10%;
+        position: absolute;
+        left: 45%;
+        z-index: 100;
+    }
+
+    .textopregunta {
+        color: white;
+        position: absolute;
+        font-family: Josefin Sans, sans-serif;
+        top: 0px;
+        z-index: 3;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .LogoElegido {
+        border-radius: 20%;
+        position: absolute;
+        left: 36%;
+        width: 25%;
+        top: 15%;
+        z-index: 100;
+    }
+
+    .DivIniciarSesion {
+        background-color: #004aad;
+        width: 50%;
+        text-align: center;
+        position: absolute;
+        left: 25%;
+        top: 80%;
+        border-radius: 10px;
+        z-index: 100;
+    }
+
+    .IniciarSesion {
+        color: #ffffff;
+        font-family: Josefin Sans, sans-serif;
+        font-size: 15px;
+        z-index: 100;
+    }
+
+    .DivRegistrarse {
+        background-color: #740748;
+        width: 50%;
+        text-align: center;
+        position: absolute;
+        left: 25%;
+        top: 90%;
+        border-radius: 10px;
+        z-index: 100;
+    }
+
+    .Registrarse {
+        color: #ffffff;
+        font-family: Josefin Sans, sans-serif;
+        font-size: 15px;
+        z-index: 100;
+    }
+
+
+
+    body {
+        overflow-y: hidden;
+    }
+
+    html,
+    body {
+        margin: 0;
+        height: 100vh;
+        background-color: #111;
+        overflow-x: hidden;
+        /* Bloquea cualquier desplazamiento horizontal */
+        position: relative;
+    }
+
+    .balon {
+        position: absolute;
+        background: url('/lo.png') no-repeat center/contain;
+        opacity: 0.9;
+        /* Menos notorio */
+        pointer-events: none;
+    }
+
+
+}

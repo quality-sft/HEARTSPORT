@@ -1,0 +1,275 @@
+.botonatras {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 3px;
+  top: 5px;
+}
+
+.LogoHorizontalfondoblanco {
+  width: 25%;
+  position: absolute;
+  left: 25%;
+}
+
+.raya {
+  color: white;
+  position: absolute;
+  font-family: Josefin Sans, sans-serif;
+  top: -12px;
+  left: 51%;
+  z-index: 3;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.logoHS {
+  border-radius: 10%;
+  position: absolute;
+  left: 55%;
+  width: 25%;
+  top: 1.5%;
+}
+
+.TextoBienvenida {
+  font-family: Josefin Sans, sans-serif;
+  color: white;
+}
+
+.TextoBienvenida1 {
+  font-family: Josefin Sans, sans-serif;
+  font-size: 50px;
+  position: relative;
+  top: -25px;
+  color: white;
+}
+
+
+
+
+.boton-tienda {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 300px;
+  border: 2px solid #000080;
+  /* Azul oscuro */
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  /* Blanco */
+  text-align: left;
+  font-size: 20px;
+  color: #000000;
+  /* Negro */
+  text-decoration: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  gap: 15px;
+  /* Espacio entre imagen y texto */
+  font-family: Josefin Sans, sans-serif;
+}
+
+.boton-tienda img {
+  width: 60px;
+  /* Ajusta el tamaño de la imagen */
+}
+
+.boton-tienda:hover {
+  background-color: #F0F0F0;
+  /* Gris claro */
+  cursor: pointer;
+
+}
+
+.boton-tienda div {
+  display: flex;
+  flex-direction: column;
+}
+
+.boton-tienda strong {
+  font-size: 22px;
+  color: #000000;
+  font-family: Josefin Sans, sans-serif;
+}
+
+
+
+
+.boton-usuario {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 300px;
+  border: 2px solid #000080;
+  /* Azul oscuro */
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  /* Blanco */
+  text-align: left;
+  font-size: 20px;
+  color: #000000;
+  /* Negro */
+  text-decoration: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  gap: 15px;
+  /* Espacio entre imagen y texto */
+  font-family: Josefin Sans, sans-serif;
+}
+
+.boton-usuario img {
+  width: 60px;
+  /* Ajusta el tamaño de la imagen */
+}
+
+.boton-usuario:hover {
+  background-color: #F0F0F0;
+  /* Gris claro */
+  cursor: pointer;
+}
+
+.boton-usuario div {
+  display: flex;
+  flex-direction: column;
+}
+
+.boton-usuario strong {
+  font-size: 22px;
+  color: #000000;
+}
+
+@media (min-width: 800px) {
+  .botonatras {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 3px;
+    top: 5px;
+  }
+
+  .LogoHorizontalfondoblanco {
+    width: 10%;
+    position: absolute;
+    left: 40%;
+  }
+
+  .raya {
+    color: white;
+    position: absolute;
+    font-family: Josefin Sans, sans-serif;
+    top: 0px;
+    left: 51%;
+    z-index: 3;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+  .logoHS {
+    border-radius: 10%;
+    position: absolute;
+    left: 53%;
+    width: 10%;
+    top: 2%;
+  }
+
+
+  .boton-tienda {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 400px;
+    height: 100px;
+    border: 2px solid #000080;
+    /* Azul oscuro */
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    /* Blanco */
+    text-align: left;
+    font-size: 20px;
+    color: #000000;
+    /* Negro */
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    gap: 15px;
+    /* Espacio entre imagen y texto */
+    font-family: Josefin Sans, sans-serif;
+    position: relative;
+    left: 500px;
+    top: -40px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .boton-tienda img {
+    width: 80px;
+    /* Ajusta el tamaño de la imagen */
+  }
+
+  .boton-tienda:hover {
+    background-color: #F0F0F0;
+    /* Gris claro */
+    cursor: pointer;
+    transform: scale(1.09);
+  }
+
+  .boton-tienda div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .boton-tienda strong {
+    font-size: 40px;
+    color: #000000;
+    font-family: Josefin Sans, sans-serif;
+  }
+
+
+
+
+  .boton-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 400px;
+    height: 100px;
+    border: 2px solid #000080;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    text-align: left;
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    gap: 15px;
+    font-family: Josefin Sans, sans-serif;
+    position: relative;
+    left: 500px;
+    top: -50px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .boton-usuario img {
+    width: 80px;
+    /* Ajusta el tamaño de la imagen */
+  }
+
+  .boton-usuario:hover {
+    background-color: #F0F0F0;
+    /* Gris claro */
+    cursor: pointer;
+    transform: scale(1.09);
+  }
+
+  .boton-usuario div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .boton-usuario strong {
+    font-size: 40px;
+    color: #000000;
+  }
+
+
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa con GraphHopper</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 500px; }
+    </style>
+</head>
+<body>
+
+    <h2>Ruta entre dos puntos</h2>
+    <ul id="steps"></ul> <!-- Agrega esto en el body para mostrar los pasos -->
+    <h3 id="steps-count"></h3>
+<ul id="steps"></ul>
+
+
+    <label>Origen: <input type="text" id="start" placeholder="Ej: Cali, Colombia"></label>
+    <button onclick="setCurrentLocation()">Usar mi ubicación</button>
+
+    <label>Destino: <input type="text" id="end" placeholder="Ej: Bogotá, Colombia"></label>
+    <button onclick="calculateRoute()">Generar Ruta</button>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([3.4516, -76.532], 6); // Centrado en Colombia
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        function getCoordinates(place) {
+            return fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${place}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.length === 0) throw new Error("No se encontró la ubicación");
+                    return [data[0].lat, data[0].lon];
+                });
+        }
+
+        function calculateRoute() {
+    let start = document.getElementById("start").value;
+    let end = document.getElementById("end").value;
+
+    Promise.all([getCoordinates(start), getCoordinates(end)])
+        .then(coords => {
+            let startCoords = coords[0];
+            let endCoords = coords[1];
+
+            let apiKey = "3e30a1f8-4b6b-448d-a7a3-21959539b7da"; // Reemplaza con tu API Key de GraphHopper
+            let routeUrl = `https://graphhopper.com/api/1/route?point=${startCoords[0]},${startCoords[1]}&point=${endCoords[0]},${endCoords[1]}&profile=foot&locale=es&instructions=true&points_encoded=false&key=${apiKey}`;
+
+            return fetch(routeUrl).then(res => res.json());
+        })
+        .then(data => {
+            if (!data.paths || data.paths.length === 0) {
+                throw new Error("No se pudo encontrar una ruta válida.");
+            }
+
+            let route = data.paths[0];
+            let routeCoords = route.points.coordinates.map(coord => [coord[1], coord[0]]);
+
+            L.polyline(routeCoords, { color: 'blue' }).addTo(map);
+            map.fitBounds(routeCoords);
+
+            // 🔢 Calcular los pasos
+            let totalDistance = route.distance; // Distancia en metros
+            let stepLength = 0.687; // Longitud promedio de un paso en metros
+            let steps = Math.round(totalDistance / stepLength);
+
+            // Mostrar en la página
+            document.getElementById("steps-count").textContent = `Estás a aproximadamente ${steps} pasos de tu destino.`;
+
+            // Mostrar los pasos detallados
+            let stepsList = document.getElementById("steps");
+            stepsList.innerHTML = ""; 
+
+            if (route.instructions && route.instructions.length > 0) {
+                route.instructions.forEach((step, index) => {
+                    let li = document.createElement("li");
+                    li.textContent = `${index + 1}. ${step.text} (${step.distance.toFixed(1)} m)`;
+                    stepsList.appendChild(li);
+                });
+            } else {
+                let li = document.createElement("li");
+                li.textContent = "No hay instrucciones disponibles.";
+                stepsList.appendChild(li);
+            }
+        })
+        .catch(error => alert("Error al calcular la ruta: " + error.message));
+}
+let retryCount = 0; // Contador de reintentos
+const maxRetries = 3; // Máximo de intentos permitidos
+
+function setCurrentLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                let lat = position.coords.latitude;
+                let lon = position.coords.longitude;
+                let accuracy = position.coords.accuracy; // Precisión en metros
+
+                // Llenar el campo "Origen" con coordenadas
+                document.getElementById("start").value = `${lat}, ${lon}`;
+
+                // Definir un icono de persona personalizado
+                var personIcon = L.icon({
+                    iconUrl: 'ubicacion.png', // Ícono de persona
+                    iconSize: [40, 40], // Tamaño del ícono
+                    iconAnchor: [20, 40], // Punto de anclaje (centro-abajo)
+                    popupAnchor: [0, -40] // Para que el popup aparezca arriba
+                });
+
+                // Agregar un marcador con el ícono de persona
+                L.marker([lat, lon], { icon: personIcon }).addTo(map)
+                    .bindPopup(`Estás aquí (Precisión: ${Math.round(accuracy)}m)`)
+                    .openPopup();
+
+                // Centrar el mapa en la ubicación con mayor precisión
+                map.setView([lat, lon], 18);
+            },
+            function (error) {
+                alert("No se pudo obtener tu ubicación: " + error.message);
+            },
+            {
+                enableHighAccuracy: true, // Forzar GPS para mayor precisión
+                timeout: 10000, // Esperar hasta 10s por una ubicación precisa
+                maximumAge: 0 // No usar caché, obtener ubicación actualizada
+            }
+        );
+    } else {
+        alert("Tu navegador no admite geolocalización.");
+    }
+}
+
+
+    </script>
+
+</body>
+</html>

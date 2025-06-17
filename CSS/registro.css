@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+
+input[type="file"] {
+    display: block;
+    margin: 10px auto;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #444;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 2px dashed #bbb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Estilos globales */
+body {
+    background-color: #0d1777;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    /* Espaciado en móviles */
+}
+
+/* Contenedor principal */
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    /* Mantiene el tamaño en pantallas grandes */
+}
+
+/* Logo */
+.logo {
+    width: 120px;
+    /* Reducido en móviles */
+    margin-bottom: 10px;
+}
+
+/* Texto de bienvenida */
+.texto-bienvenida {
+    font-size: 20px;
+    /* Tamaño ajustado */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Campos de entrada */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+}
+
+.profile-picture {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgb(0, 0, 0);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.input-field:focus {
+    border-color: #740748;
+}
+
+/* Contenedor de contraseña */
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-password img {
+    width: 22px;
+    /* Ajustado para móviles */
+}
+
+/* Etiquetas */
+.label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Sección de detalles */
+.subtitle {
+    font-size: 16px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.extra-details {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.input-field.small {
+    width: 45%;
+}
+
+/* Botón de registro */
+.btn-register {
+    background-color: #740748;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #5a0335;
+}
+
+/* Botón de cancelar */
+.btn-cancel {
+    display: block;
+    margin-top: 10px;
+    color: #740748;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-cancel:hover {
+    text-decoration: underline;
+}
+
+/* 📱 Estilos para móviles */
+@media (max-width: 800px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .texto-bienvenida {
+        font-size: 18px;
+    }
+
+    .btn-register {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Estilos globales */
+    body {
+        background-color: #0d1777;
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+
+    /* Contenedor principal */
+    .container {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        text-align: center;
+        width: 400px;
+    }
+
+    /* Logo */
+    .logo {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    /* Texto de bienvenida */
+    .texto-bienvenida {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* Campos de entrada */
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        font-size: 16px;
+        text-align: center;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    .input-field:focus {
+        border-color: #740748;
+    }
+
+    /* Contenedor de contraseña */
+    .password-container {
+        position: relative;
+    }
+
+    .toggle-password {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .toggle-password img {
+        width: 25px;
+    }
+
+    /* Etiquetas */
+    .label {
+        display: block;
+        text-align: left;
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    /* Sección de detalles */
+    .subtitle {
+        font-size: 18px;
+        color: #333;
+        margin-top: 20px;
+    }
+
+    .extra-details {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .input-field.small {
+        width: 45%;
+    }
+
+    .profile-picture {
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid rgb(0, 0, 0);
+        position: relative;
+        left: 50px;
+        top: -20px;
+    }
+
+    .profile-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* Botón de registro */
+    .btn-register {
+        background-color: #740748;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: 0.3s;
+    }
+
+    .btn-register:hover {
+        background-color: #5a0335;
+    }
+
+    /* Botón de cancelar */
+    .btn-cancel {
+        display: block;
+        margin-top: 10px;
+        color: #740748;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .btn-cancel:hover {
+        text-decoration: underline;
+    }
+
+    .form {
+        width: 250px;
+    }
+
+    input[type="file"] {
+        width: 200px;
+    }
+}

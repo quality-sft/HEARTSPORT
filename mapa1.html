@@ -1,0 +1,147 @@
+<!-- visual6.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Sport</title>
+    <link rel="website icon" type="png" href="IMAGENES/visual7/logoweb.png">
+    <link rel="stylesheet" href="CSS/mapa1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="heder">
+        <a href="menu.html"><img src="IMAGENES/visual7/atras.png" class="botonatras"></a>
+        <h1 class="TextMapadelRecorrido"><b>Mapa del recorrido</b></h1>
+    </header>
+
+    <div id="map" style="height: 400px; width: 100%; "></div>
+
+    <br><br>
+    <footer class="footer">
+        <div class="input-container">
+            <div class="container">
+                <label for="origen"><b>¿Cuál es tu punto de partida?</b></label>
+                <input type="text" id="origen" class="styled-select" placeholder="Escribe tu barrio de origen">
+            </div>
+        </div>
+        <br>
+        <div class="input-container">
+            <div class="container">
+                <label for="destino"><b>¿A dónde deseas ir?</b></label>
+                <input type="text" id="destino" class="styled-select" placeholder="Escribe tu destino">
+            </div>
+        </div>
+        <br>
+        <div class="input-container">
+            <div class="container">
+                <label for="origen"><b>¿En qué medio practicarás?</b></label>
+                <select id="medio" class="styled-selecta">
+                 <option value="" disabled selected>Selecciona tu medio</option>
+                 <option value="bicicleta">Bicicleta</option>
+                 <option value="running">Running</option>
+                 <option value="patinaje">Patinaje</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="input-container">
+            <div class="container">
+                <label for="origen"><b>Ponle un nombre a tu ruta</b></label>
+                <input type="text" id="nombre" class="styled-select" placeholder="Dale un nombre a tu ruta">
+            </div>
+        </div>
+        <br>
+        <div class="input-container">
+            <div class="container">
+                <label for="origen"><b>Visibilidad de la ruta</b></label>
+                <select id="tiporuta" class="styled-selecta">
+                 <option value="" disabled selected>Tipo de ruta</option>
+                 <option value="Con amistades">Con amistades</option>
+                 <option value="Privada">Privada</option>
+                </select>
+            </div>
+        </div>
+        <br><br><br>
+        <div  class="DivIniciar">
+            <button id="iniciarRuta" onclick="iniciarRuta()" class="TextIniciar"><b>Iniciar</b></button>
+        </div>
+    </footer>
+
+    <script>
+        const supabaseUrl = "https://snytahpifahyqbuosbes.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNueXRhaHBpZmFoeXFidW9zYmVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE0ODQ4ODcsImV4cCI6MjA1NzA2MDg4N30.Q1W3yhjqu-cRnnx9tRxA4Inxnlnz0AU78rfw6aDa4VY";
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+        async function iniciarRuta(){
+            let origen = document.getElementById("origen").value;
+            let destino = document.getElementById("destino").value;
+            let nombre = document.getElementById("nombre").value;
+            let modalidad = document.getElementById("medio").value;
+            let tiporuta = document.getElementById("tiporuta").value;
+
+            if (!origen || !destino) {
+                alert("Por favor ingresa un origen y un destino.");
+                return;
+            } else if (!modalidad){
+                alert("Por favor ingresa una modalidad");
+                return;
+            } else if (!nombre){
+                alert("Por favor ingresa un nombre")
+                return;
+            }
+
+
+
+    const { data, error } = await supabase
+      .from('Rutas')
+      .select('nombreruta')
+      .eq('nombreruta', nombre);
+
+    if (error) {
+      console.error('Error al consultar Supabase:', error);
+      alert("Error consultando Supabase.");
+      return;
+    }
+
+    if (data.length > 0) {
+      alert("Ese nombre ya existe. Por favor, escribe uno diferente.");
+      return;
+      if (!nombre) {
+        alert("No puedes dejar el nombre vacío.");
+        return;
+      }
+    } else {
+      console.log(".")
+    }
+  
+            
+            
+
+            // Guarda en el localStorage
+            localStorage.setItem('origen', origen);
+            localStorage.setItem('destino', destino);
+            localStorage.setItem('modalidad', modalidad);
+            localStorage.setItem('nombre', nombre);
+            localStorage.setItem('tiporuta', tiporuta);
+
+            // Redirige a la página del mapa
+
+              window.location.href = "mapa2bike.html";
+             // asegúrate que este sea el nombre correcto
+        };
+    </script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+    <script src="JS/mapa1.js"></script>
+</body>
+
+</html>

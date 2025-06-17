@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar Perfil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/editarperfilusuario.css">
+  <link rel="website icon" type="png" href="IMAGENES/visual1/logoweb.png">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+
+<body>
+  <div class="form-container">
+    <div class="header">
+      <img src="IMAGENES/visual14/logo empresa.png" alt="Logo empresa">
+      <img src="IMAGENES/visual14/logo app.png" alt="Logo app">
+    </div>
+
+    <div class="form-group">
+      <img src="IMAGENES/visual14/perfil.png" alt="Nombre">
+      <input id="nombre" placeholder="Cargando..." />
+    </div>
+
+    <div class="form-group">
+      <img src="IMAGENES/visual14/correo.png" alt="Correo">
+      <input id="correo" placeholder="Cargando..." />
+    </div>
+
+    <div class="form-group password">
+      <img src="IMAGENES/visual14/candado.png" alt="Contraseña">
+      <input id="password" placeholder="Cargando..." />
+      <button><img src="IMAGENES/visual14/ojo.PNG" alt="Ver contraseña" width="20" /></button>
+    </div>
+
+    <div class="form-group">
+      <img src="IMAGENES/visual14/telefono.png" alt="Teléfono">
+      <input id="telefono" placeholder="Cargando..." />
+    </div>
+
+    <div class="mini-group">
+      <div class="mini-input">
+        <img src="IMAGENES/visual14/persona.png" alt="Estatura">
+        <input id="estatura" placeholder="Cargando..." />
+        <p>m</p>
+      </div>
+
+      <div class="mini-input">
+        <img src="IMAGENES/visual14/peso.png" alt="Peso">
+        <input id="peso" placeholder="Cargando..." />
+        <p>kg</p>
+      </div>
+
+
+    </div>
+    <br>
+    <div class="form-group">
+      <img src="IMAGENES/visual14/telefono.png" alt="Teléfono">
+      <input id="fechanacimiento" type="date" placeholder="Cargando..." />
+    </div>
+    <div class="form-group">
+      <img src="IMAGENES/visual14/telefono.png" alt="Teléfono">
+      <input id="dirección" placeholder="Cargando..." />
+    </div>
+
+    <div class="form-grouperfil">
+      <img class="fotico" src="https://img.icons8.com/ios7/600/apple-camera.png" alt="Foto de Perfil">
+      <label for="cambiarfoto">
+        <img id="fotodeperfil" src="" alt="a de Perfil" class="profile-picture" />
+      </label>
+
+    </div>
+    <input type="file" id="cambiarfoto" style="display: none;" onchange="handleImageChange(event)" />
+
+    <div class="buttons">
+      <button onclick="editarNombre()" id="guardar">GUARDAR CAMBIOS</button>
+      <button onclick="retrocedereditarperfil()" id="cancelar">CANCELAR</button>
+    </div>
+    <img src="" id="prueba" alt="">
+  </div>
+</body>
+<script src="JS/editarperfilusuario.js"></script>
+
+</html>
