@@ -79,7 +79,6 @@ width: 60px;
         boton.textContent = "Entrar";
         boton.onclick = () => {
             localStorage.setItem("ruta_id", ruta.idruta); // o lo que necesites
-            alert(ruta.idruta)
             subirdatosrutacompartida();
             window.location.href = "mapacompartido.html"; // cambia la ruta si es necesario
         };

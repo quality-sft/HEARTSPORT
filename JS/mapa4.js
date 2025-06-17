@@ -74,7 +74,6 @@ async function calidadruta() {
 }
 
 const img = localStorage.getItem("modalidad")
-alert(img)
 if (img === "bicicleta"){
   document.getElementById("imga").src = "https://www.quironsalud.com/idcsalud-client/cm/images?locale=es_ES&idMmedia=647913"
 } else if (img === "running"){

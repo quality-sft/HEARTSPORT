@@ -60,7 +60,5 @@ function cambiar4() {
 
 
 document.getElementById("cancelar").onclick = function () {
-
     window.location.href = "visual1.html";
-
 }
