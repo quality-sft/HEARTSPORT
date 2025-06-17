@@ -3,7 +3,7 @@
   "short_name": "HS",
   "start_url": "./inicio.html",
   "display": "standalone",
-  "background_color": "none",
+  "background_color": "#004aad",
   "theme_color": "#000000",
   "icons": [
     {
