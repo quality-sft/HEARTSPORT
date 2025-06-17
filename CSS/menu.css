@@ -144,7 +144,8 @@ a {
     top: 120px;
     height: 550px;
     z-index: 4;
-    width: 100px;
+    width: 90%;
+    height: 90%;
 }
 
 .textpublicidad {
